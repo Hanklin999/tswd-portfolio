@@ -1,6 +1,6 @@
 | [Home](https://hanklin999.github.io/tswd-portfolio/) | [Data Visualization Examples](dataviz-examples) | [Critique by Design](critique-by-design) | [Final Project I](final-project-part-one) | [Final Project II](final-project-part-two) | [Final Project III](final-project-part-three) |
 
-# Hank’s Data Visualization Portfolio
+
 
 Welcome to my portfolio for Telling Stories with Data at Carnegie Mellon University. This site documents my visualization exercises, design critiques, and final project as I learn to communicate data more effectively.
 

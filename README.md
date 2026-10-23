@@ -11,7 +11,7 @@ Welcome to my portfolio for Telling Stories with Data at Carnegie Mellon Univers
 # About me
 
 <!-- Optional: upload hank-profile.jpg to the repository root, then remove the comment markers around the image below. -->
-<!-- <img src="hank-profile.jpg" alt="Portrait of Chih-Han Lin (Hank)" width="180"> -->
+<img src="hank-profile.jpg" alt="Portrait of Chih-Han Lin (Hank)" width="180">
 
 Hi, I’m Chih-Han Lin, and I go by Hank. I’m pursuing a Master of Information Systems Management with a concentration in Business Intelligence and Data Analytics (MISM-BIDA) at Carnegie Mellon University’s Heinz College, graduating in 2027.
 

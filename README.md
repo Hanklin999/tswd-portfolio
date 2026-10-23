@@ -6,8 +6,12 @@ Welcome to my portfolio for Telling Stories with Data at Carnegie Mellon Univers
 
 - [Portfolio website](https://hanklin999.github.io/tswd-portfolio/)
 - [GitHub repository](https://github.com/Hanklin999/tswd-portfolio)
+- [LinkedIn](https://www.linkedin.com/in/hank-lin-ch17/)
 
 # About me
+
+<!-- Optional: upload hank-profile.jpg to the repository root, then remove the comment markers around the image below. -->
+<!-- <img src="hank-profile.jpg" alt="Portrait of Chih-Han Lin (Hank)" width="180"> -->
 
 Hi, I’m Chih-Han Lin, and I go by Hank. I’m pursuing a Master of Information Systems Management with a concentration in Business Intelligence and Data Analytics (MISM-BIDA) at Carnegie Mellon University’s Heinz College, graduating in 2027.
 
@@ -55,4 +59,4 @@ My final project will bring together research, data analysis, visualization, and
 
 # AI acknowledgements
 
-I used ChatGPT to help draft and organize the initial portfolio text and Markdown structure based on background information I provided.
+I used ChatGPT to help draft and organize the portfolio text and Markdown structure based on background information I provided, and to prepare navigation links and website configuration.

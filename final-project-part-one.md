@@ -203,10 +203,10 @@ The project uses five related datasets: `orders.csv`, `order_products__prior.csv
 
 | Name | URL | Description |
 |---|---|---|
-| Instacart Market Basket Analysis | [Kaggle Dataset](https://www.kaggle.com/competitions/instacart-market-basket-analysis/data) | Public dataset containing anonymized grocery purchase histories and product metadata |
-| Orders | [Dataset Download](https://www.kaggle.com/competitions/instacart-market-basket-analysis/data) | Shopper IDs, order IDs, order sequence, and time between orders |
-| Order Products (Prior) | [Dataset Download](https://www.kaggle.com/competitions/instacart-market-basket-analysis/data) | Products purchased in recorded prior orders and reordered indicators |
-| Products, Aisles, and Departments | [Dataset Download](https://www.kaggle.com/competitions/instacart-market-basket-analysis/data) | Product names and category classifications |
+| Instacart Market Basket Analysis | [Kaggle Dataset](https://www.kaggle.com/datasets/psparks/instacart-market-basket-analysis) | Public dataset containing anonymized grocery purchase histories and product metadata |
+| Orders | [Dataset Download](https://www.kaggle.com/datasets/psparks/instacart-market-basket-analysis) | Shopper IDs, order IDs, order sequence, and time between orders |
+| Order Products (Prior) | [Dataset Download](https://www.kaggle.com/datasets/psparks/instacart-market-basket-analysis) | Products purchased in recorded prior orders and reordered indicators |
+| Products, Aisles, and Departments | [Dataset Download](https://www.kaggle.com/datasets/psparks/instacart-market-basket-analysis) | Product names and category classifications |
 
 **Exploratory analysis and code:** [The Habitual Shopper — GitHub Repository](https://github.com/Hanklin999/the-habitual-shopper)
 

@@ -194,10 +194,9 @@ nav a[aria-current="page"] {
 .profile-photo {
   display: block;
   width: 210px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: 50% 27%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 3px;
 }
 
 .profile-figure figcaption {

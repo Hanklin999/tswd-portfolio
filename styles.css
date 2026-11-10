@@ -183,8 +183,37 @@ nav a[aria-current="page"] {
   margin-top: 8px;
 }
 
-.course-note {
+.sidebar {
   align-self: start;
+}
+
+.profile-figure {
+  margin: 0 0 28px;
+}
+
+.profile-photo {
+  display: block;
+  width: 210px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 27%;
+}
+
+.profile-figure figcaption {
+  margin-top: 14px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.profile-figure figcaption span {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.course-note {
   padding: 26px;
   border-top: 4px solid var(--cmu-red);
   background: var(--soft-gray);
@@ -314,7 +343,7 @@ nav a[aria-current="page"] {
     grid-template-columns: 1fr;
   }
 
-  .course-note {
+  .sidebar {
     max-width: 440px;
   }
 

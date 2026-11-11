@@ -6,29 +6,27 @@
 
 ## Family spending across income quintiles
 
-This project critiques and redesigns a visualization of household spending patterns across income quintiles in the United Kingdom. The goal is to make the differences between lower- and higher-income households easier to compare without implying that percentages with different denominators can be added together.
+This project redesigns a chart about how UK households in different income groups divide their weekly spending.
 
 ## Step one: the visualization
 
-I selected MakeoverMonday's [2025/W39 Family Spending in the UK](https://makeovermonday.vercel.app/dataset/2025w39-family-spending-in-the-uk). The visualization uses data from the UK Office for National Statistics (ONS) to compare the percentage of weekly household expenditure assigned to different categories across five equivalised disposable income quintiles.
+I selected MakeoverMonday's [2025/W39 Family Spending in the UK](https://makeovermonday.vercel.app/dataset/2025w39-family-spending-in-the-uk), which uses data from the UK Office for National Statistics. The original chart compares spending categories across five income quintiles.
 
-I chose this visualization because the topic is socially meaningful and relevant to readers interested in household spending, inequality, and public policy. The original chart has a clean appearance and a reliable source, but its stacked-bar design makes the income groups difficult to compare. Each segment represents a percentage calculated from a different income group's total expenditure, so the combined length of a bar has no meaningful interpretation. In addition, “All households” includes the five quintiles but is presented as another segment.
+I chose it because the topic is relevant to household budgets and inequality, but the stacked bars make comparisons difficult. Each income group's percentages use a different spending total, so stacking them creates a combined bar length with no useful meaning. “All households” also repeats information already represented by the five quintiles.
 
 ## Step two: the critique
 
-I evaluated the original visualization using Stephen Few's *Data Visualization Effectiveness Profile*. The chart performs reasonably well in usefulness and aesthetics: the topic is important, the expenditure categories are recognizable, the source is clear, and the design avoids unnecessary decoration. It also allows readers to notice that spending patterns vary across income groups.
+Using Stephen Few's *Data Visualization Effectiveness Profile*, I found that the chart has a clear topic, a reliable source, and a simple visual style. Its main weaknesses are perceptibility and truthfulness.
 
-Its main weaknesses are perceptibility and truthfulness. Because the income groups are stacked, most values do not share a common baseline. For example, housing represents 27.0% of total spending for the Bottom fifth and 13.1% for the Top fifth, but the positions of the segments make this difference difficult to compare directly. Stacking percentages with different denominators also creates totals above 100% that have no useful meaning. The chart therefore contains valuable and accurate source data, but its visual structure makes the relationship between the values harder to understand and easier to misinterpret.
-
-The primary audience appears to be the general public, especially readers interested in public policy, household spending, and social inequality. The plain-language title and simplified categories are appropriate for this audience. However, readers must repeatedly consult the legend and compare segments that begin at different positions, which reduces the chart's effectiveness for a general audience.
+Most values do not share a common baseline, so readers cannot compare them quickly. For example, housing accounts for 27.0% of spending in the lowest-income group and 13.1% in the highest-income group, but the stacked layout hides this difference. The chart is intended for a general audience, yet readers must move between the bars and legend to understand the main pattern.
 
 ## Step three: Sketch a solution
 
-In my redesign, I focused on making the differences between lower- and higher-income households easier to compare. I replaced the stacked bars with a multi-series dot plot that uses a common percentage scale for every expenditure category. The Bottom fifth and Top fifth use two contrasting colors, while the three middle quintiles appear in gray. This preserves all five income groups while emphasizing the comparison between the two ends of the income distribution. I removed “All households” from the main chart because it overlaps with the five quintiles and is not a separate income group. I also added direct annotations to the housing category and highlighted categories such as housing, food, recreation, restaurants, and other expenditure. I wanted to test whether readers could identify the major spending differences more quickly with this design than with the original stacked chart.
+I replaced the stacked bars with a dot plot so every value uses the same percentage scale. Contrasting colors emphasize the lowest- and highest-income groups, while gray dots show the three middle groups. I removed “All households,” shortened several category names, and used annotations to highlight the main comparisons. This version was designed to make the differences between income groups easier to see.
 
 ### Static prototype
 
-The static image below preserves the version shown during the in-class critique.
+This was the version used in the in-class discussion.
 
 ![A multi-series dot plot comparing the share of weekly household expenditure across five income quintiles. The Bottom fifth and Top fifth are emphasized, and housing is directly annotated.](images/critique-by-design/Ay4B5-lower-income-households-devote-more-of-their-spending-to-housing-and-food-.png)
 

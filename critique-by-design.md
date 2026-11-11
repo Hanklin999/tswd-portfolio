@@ -32,20 +32,14 @@ The static image below preserves the version shown during the in-class critique.
 
 ![A multi-series dot plot comparing the share of weekly household expenditure across five income quintiles. The Bottom fifth and Top fifth are emphasized, and housing is directly annotated.](images/critique-by-design/Ay4B5-lower-income-households-devote-more-of-their-spending-to-housing-and-food-.png)
 
-### Interactive prototype
-
-[Open the Datawrapper prototype in a new page](https://datawrapper.dwcdn.net/Ay4B5/2/).
-
-<iframe title="Lower-income households devote more of their spending to housing and food" aria-label="Dot Plot" id="datawrapper-chart-Ay4B5" src="https://datawrapper.dwcdn.net/Ay4B5/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="362" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
-
 ## Step four: Test the solution
 
-### Participant 1 — Peer student
+### In-class peer discussion
 
-I shared the first Datawrapper version with a fellow student and asked about its clarity, readability, and overall presentation. The participant made four main comments:
+During class, I shared the first Datawrapper version with three classmates and asked about its clarity, readability, and overall presentation. Our discussion produced four main comments:
 
-1. **Income labels:** The quintile labels were not immediately clear. The participant suggested familiar terms such as “the rich” and “the poor” to make the comparison easier to understand.
-2. **Too many categories:** The chart included too many spending categories, which made the main message difficult to identify. The participant recommended keeping only the categories that best support the story.
+1. **Income labels:** The quintile labels were not immediately clear. My classmates suggested familiar terms such as “the rich” and “the poor” to make the comparison easier to understand.
+2. **Too many categories:** The chart included too many spending categories, which made the main message difficult to identify. They recommended keeping only the categories that best support the story.
 3. **Gridlines and layout:** The gridlines made the chart feel visually unbalanced and distracted from the data.
 4. **Reading flow:** The first highlighted point appeared near the upper-right of the chart, so the reading order did not feel natural.
 
@@ -55,7 +49,7 @@ The feedback showed that the chart needed a clearer entry point and less visual 
 
 ## Step five: build the solution
 
-The final redesign keeps the dot plot because it gives every value the same percentage scale and makes the five income groups easier to compare. Based on the user test, I completed the following changes:
+The final redesign keeps the dot plot because it gives every value the same percentage scale and makes the five income groups easier to compare. Based on the in-class peer discussion, I completed the following changes:
 
 - Replaced the short quintile labels with clearer descriptions, from “Lowest income (bottom 20%)” to “Highest income (top 20%).”
 - Reduced the chart to eight spending categories so the main pattern is easier to see.

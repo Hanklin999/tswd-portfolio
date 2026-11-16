@@ -6,152 +6,98 @@
 
 > **Online grocery shopping may offer endless choices, but are you really discovering anything new?**
 
-A changing basket does not always mean discovery. Shoppers may simply be combining familiar products in different ways.
+Different baskets do not always mean new discoveries. Shoppers may simply rotate among products they already know.
 
-**Primary audience:** Product managers and analysts working on grocery recommendations, repeat purchases, and product discovery.
-
-**Reader takeaway:** Understand what is routine and what is real exploration, so routine purchases can be simplified and discovery can become more intentional.
+**Project links:** [Analysis repository](https://github.com/Hanklin999/the-habitual-shopper) | [Part II: Development and Iteration](final-project-part-two)
 
 ---
 
-## Outline
+## The Proposal
 
-### Project Overview
+### Why This Matters
 
-Grocery shopping seems repetitive, so I expected consecutive orders to contain many of the same products. However, the Instacart data showed less overlap than I expected. This led me to ask whether shoppers were discovering new products or simply rotating among familiar ones. My story compares consecutive baskets with longer purchase histories to separate these two behaviors.
+Online stores make thousands of products available, but more choice does not automatically create more exploration. If routine purchasing and discovery are treated as the same behavior, shoppers may receive unhelpful recommendations and product teams may misread what a changing basket means.
 
-### Story Structure
+### Audience and Reader Goal
 
-#### Act 1 — Consecutive Baskets Share Relatively Few Products
+The primary audience is product managers and analysts working on online grocery shopping, repeat purchases, and recommendations.
 
-Among 484 shoppers with complete histories for orders 5–10, consecutive baskets have an average product overlap of only **19.4%**. This creates the opening puzzle: if grocery shopping is habitual, why do the baskets look so different?
+As a reader, I want to understand the difference between **changing a basket** and **discovering products**, so I can recognize routine purchases, save time on them, and make exploration more intentional.
 
-#### Act 2 — Baskets Look More Familiar at Broader Category Levels
+### Main Question
 
-The same orders look more similar when products are grouped into broader categories:
-
-- **Products:** 19.4% overlap
-- **Aisles:** 29.6% overlap
-- **Departments:** 46.1% overlap
-
-This does not prove that preferences are stable. Broader categories naturally create more opportunities for overlap. It does show that product-level change is only one part of the story.
-
-#### Act 3 — A Different Basket Can Contain Nothing New
-
-Basket overlap compares **two consecutive orders**. New-to-history purchasing asks whether an item has appeared anywhere in the shopper's **previously recorded history**. These measures can describe very different behavior.
-
-Shopper 42 provides a clear example. Order 9 contains six products and Order 10 contains seven. Only **Organic Blueberries** appears in both orders, producing an overlap of **8.3%**. Yet all seven products in Order 10 had appeared earlier in the shopper's history. The basket changed almost completely, but it contained nothing new to the recorded history.
-
-I then use median thresholds for overlap and new-to-history purchasing to organize the sample into four descriptive patterns:
-
-- **Routine:** Similar baskets with mostly familiar products
-- **Rotational:** Different baskets with mostly familiar products
-- **New-to-user:** Different baskets with more new-to-history products
-- **Mixed:** Similar baskets that also include new-to-history products
-
-The most interesting group is **Rotational Shoppers**. In the exploratory sample, **50 of 484 shoppers (10.3%)** have both low basket overlap and low new-to-history purchasing. These labels help explain the data; they are not permanent or validated customer types.
-
-#### Act 4 — Some Shopping Patterns Continue
-
-I compare behavior in orders 5–10 with a later period covering orders 11–15. Among 323 shoppers with enough history for both periods:
-
-- **80.3%** of initially Routine shoppers (n = 127) remain Routine.
-- **53.7%** of initially Rotational shoppers (n = 41) remain Rotational.
-
-Some patterns continue, but they are not equally stable. The product implication is simple: teams should measure routine replenishment and product discovery separately instead of treating every basket change as evidence of exploration.
+**When shopping baskets change, are consumers actually discovering new products?**
 
 ---
 
-## Initial Sketches
+## Planned Story
 
-These sketches show the planned flow of the final story. They are based on my exploratory analysis and will be redesigned for the final project.
+1. **The puzzle:** Grocery shopping is habitual, but consecutive baskets may share fewer products than expected.
+2. **The reveal:** Baskets can look different at the product level while remaining familiar at the aisle or department level.
+3. **The distinction:** Low overlap between two orders does not necessarily mean the later order contains new-to-history products.
+4. **The implication:** Routine replenishment and product discovery should be measured and designed as different shopping needs.
 
-### Consecutive Baskets Share Relatively Few Products
+The analysis will compare consecutive baskets with each shopper's longer recorded purchase history. This allows the story to separate basket variation from new-to-history purchasing.
+
+---
+
+## Initial Visualization Sketches
+
+### 1. How Similar Are Consecutive Baskets?
 
 ![Distribution of Product-Level Basket Similarity](images/habitual-shopper/sketch_01_similarity.png)
 
-This histogram introduces the puzzle by showing the distribution of basket overlap across 484 shoppers.
+This opening chart introduces the puzzle by showing how much consecutive orders overlap.
 
-### Baskets Look More Familiar at Broader Category Levels
+### 2. Different Products, Familiar Categories
 
 ![Product, Aisle, and Department Similarity](images/habitual-shopper/sketch_02_categories.png)
 
-This comparison shows how overlap increases from products to aisles and departments, while noting that broader categories naturally create more overlap.
+This comparison asks whether apparently different baskets still belong to familiar aisles and departments.
 
-### A Changing Basket Does Not Always Mean New Products
+### 3. Basket Change Is Not the Same as Discovery
 
 ![Basket Similarity vs. Product Novelty](images/habitual-shopper/sketch_03_discovery.png)
 
-This is the main chart in the story. It highlights the 50 Rotational Shoppers whose baskets change even though their purchases are mostly familiar.
-
-#### One Different Basket, No New-to-History Products
+This is the central chart. It compares basket overlap with the share of products that are new to a shopper's recorded history.
 
 ![Real Shopping Basket Example: Shopper 42](images/habitual-shopper/sketch_03_basket_example.png)
 
-The side-by-side orders make the main idea concrete: only one item overlaps, but every item in the second order has been purchased before.
+The Shopper 42 example will make the distinction concrete by showing two different baskets made entirely from familiar products.
 
-### Some Shopping Patterns Continue Across Later Orders
+### 4. Do the Patterns Continue?
 
 ![Shopping Pattern Persistence](images/habitual-shopper/sketch_04_persistence.png)
 
-Two 100% stacked bars compare how often Routine and Rotational shoppers retain their labels in the later period.
+The final chart will test whether the observed patterns continue across a later group of orders.
 
 ---
 
-## The Data
+## Data and Method
 
-### Data at a Glance
+- **Source:** [Instacart Market Basket Analysis](https://www.kaggle.com/competitions/instacart-market-basket-analysis/data)
+- **Data:** Anonymized orders, products, aisles, departments, and reorder indicators
+- **Basket overlap:** Jaccard similarity between consecutive orders
+- **Product discovery proxy:** Share of products not previously observed in the shopper's recorded history
+- **Tools:** Python, Pandas, NumPy, and Matplotlib; Tableau or Plotly may be used for final presentation
+- **Code and outputs:** [The Habitual Shopper repository](https://github.com/Hanklin999/the-habitual-shopper)
 
-- **Source:** [Instacart Market Basket Analysis](https://www.kaggle.com/datasets/psparks/instacart-market-basket-analysis), released for a 2017 Kaggle competition
-- **Content:** Anonymized order histories, products, order sequence, aisles, and departments
-- **Files used:** `orders.csv`, `order_products__prior.csv`, `products.csv`, `aisles.csv`, and `departments.csv`
-- **Initial sample:** First 1,000 eligible shoppers by user ID
-- **Main analysis:** 484 shoppers with complete histories for orders 5–10
-- **Later comparison:** 323 shoppers with enough history for orders 11–15
-- **Code:** [The Habitual Shopper — GitHub Repository](https://github.com/Hanklin999/the-habitual-shopper)
+### Important Limits
 
-I have downloaded the data and completed the initial analysis in Python. The sample is useful for building the story, but it is not a random sample and should not be treated as representative of all Instacart shoppers.
-
-### Analytical Approach
-
-**Basket overlap** is measured with the Jaccard Index:
-
-**Products in Both Baskets / Unique Products Across Both Baskets**
-
-I calculate it separately for product, aisle, and department sets. **New-to-history purchasing** is the share of products marked `reordered = 0`, meaning that the item has not appeared earlier in the shopper's recorded history. I use each shopper's averages during orders 5–10 to create the four descriptive patterns and compare them with orders 11–15.
-
-### What This Analysis Cannot Tell Us
-
-- “New” means new to the recorded Instacart history, not necessarily new to the shopper's life.
-- Purchase records do not show browsing, searches, recommendation exposure, or customer motivation.
-- The first 1,000 eligible users are not a random sample of all Instacart shoppers.
-- Novelty tends to decline as more purchase history becomes available.
-- The four patterns are descriptive labels, not permanent customer types.
-
-The findings are descriptive rather than causal. An experiment would be needed to determine whether a recommendation strategy changes customer behavior.
+- New-to-history does not necessarily mean new to the shopper's life.
+- Purchase records do not show browsing, search, recommendation exposure, or motivation.
+- The initial sample is not random, so results should not be generalized to all shoppers.
+- The analysis is descriptive, not causal.
 
 ---
 
-## Method and Medium
+## Intended Medium and Call to Action
 
-I plan to create an interactive, scroll-driven story on **GitHub Pages**, rather than a standalone dashboard.
-
-- **Python, Pandas, and NumPy:** Data preparation and analysis
-- **Matplotlib:** Current exploratory sketches
-- **Tableau or Plotly:** Final annotated and interactive charts
-- **Planned interactions:** Compare category levels, explore shopping patterns, and inspect the Shopper 42 example
-
-Each section will present one question, one main visual, and one takeaway before moving to the next part of the story.
-
----
-
-## What Should Readers Do?
+The final project will be a scroll-driven story on GitHub Pages. Each section will use one main question, one visual, and one takeaway.
 
 > **Automate the routine. Make discovery intentional.**
 
-Shoppers can save or automate products they purchase regularly. When they want to explore, they can look beyond their usual products, recommendations, or shopping platform. This may help them spend less time on repeat shopping and manage their choices and budget more intentionally.
-
-For product teams, the same idea suggests treating replenishment and discovery as different customer needs—and evaluating them with different measures.
+Shoppers may save time by using subscriptions or saved lists for routine items, then comparing products, stores, or platforms when they genuinely want to explore. Product teams can support this by treating replenishment and discovery as different needs and testing them with different measures.
 
 ---
 
@@ -159,10 +105,7 @@ For product teams, the same idea suggests treating replenishment and discovery a
 
 1. Instacart. (2017). *Instacart Market Basket Analysis*. Kaggle. https://www.kaggle.com/competitions/instacart-market-basket-analysis/data
 2. Berinato, S. (2016). *Good Charts: The HBR Guide to Making Smarter, More Persuasive Data Visualizations*. Harvard Business Review Press.
-3. Original exploratory analysis and visualization sketches developed for the CMU Telling Stories with Data course using the Instacart dataset.
-
----
 
 ## AI Acknowledgements
 
-I used ChatGPT to help brainstorm the story structure, debug parts of the Python analysis, and revise the organization and wording of this proposal. I checked the results against the Instacart data and made the final decisions about the topic, analysis, visualizations, and interpretation. All numerical results and shopping examples shown here come from the dataset rather than generated data.
+I used ChatGPT to help brainstorm the story structure, debug parts of the Python analysis, and revise the organization and wording. I checked the numerical results against the Instacart data and made the final decisions about the topic, analysis, visualizations, and interpretation.

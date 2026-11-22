@@ -6,100 +6,69 @@
 
 > **Online grocery shopping may offer endless choices, but are you really discovering anything new?**
 
-**Project links:** [Part I: Initial Proposal](final-project-part-one) | [Analysis repository](https://github.com/Hanklin999/the-habitual-shopper)
+**Project links:** [Part I: Initial Proposal](final-project-part-one) | [Analysis repository](https://github.com/Hanklin999/the-habitual-shopper) | [Shorthand Story: The Habitual Shopper](https://carnegiemellon.shorthandstories.com/the-habitual-shopper-an-instacart-data-story/index.html)
 
 ---
 
 ## How the Story Developed
 
-Part I began with a broad question about whether online shopping encourages discovery. The analysis led to a more specific distinction:
+In Part I, I wanted to explore whether online grocery shoppers tend to repeat their purchases or try new products. As I worked with the Instacart dataset, I realized that simply comparing two consecutive orders does not tell the whole story.
 
-> **A changing basket is not necessarily a discovery basket.**
+> **A product missing from the previous order is not necessarily new.**
+The shopper might have purchased it several orders earlier. This became the main idea behind my story: a changing shopping basket does not always mean a shopper is discovering new products.
 
-Basket overlap compares two consecutive orders. Product novelty looks farther back and asks whether an item has appeared anywhere in the shopper's recorded history. The Part II story is organized around this difference.
+For Part II, I created a draft story using Shorthand. I organized the analysis into a few sections, starting with shopping patterns across product categories, followed by the difference between repeat purchases and new products. I also included a real example from Shopper 977 to make the findings easier to understand.
 
-The analysis uses the first 1,000 eligible shoppers by user ID. The main fixed-window sample contains **484 shoppers** with complete records for orders 5-10. A later comparison uses **323 shoppers** with complete records for orders 11-15.
+The analysis focuses on 484 shoppers with complete records for Orders 5–10. I used Python and Datawrapper to create the visualizations and Shorthand to present them as a visual story.
 
 ---
 
 # Wireframes and Storyboards
 
-The final story is planned as four connected sections. Each section asks one question, presents one main visual, and ends with a short transition.
+I used Shorthand to build a working draft of my story. The goal was to guide readers from general shopping patterns to a real shopper's experience, and then explore what the findings might mean for grocery apps.
 
-## Act 1: The Puzzle
+[View the Shorthand Story](https://carnegiemellon.shorthandstories.com/the-habitual-shopper-an-instacart-data-story/index.html)
 
-### Shopping Baskets Often Change
 
-![Distribution of Product-Level Basket Similarity](images/habitual-shopper/sketch_01_similarity.png)
+## Act 1: Different Products, Familiar Categories?
 
-**Question:** How similar are a shopper's consecutive orders?
+The story starts by comparing repeat purchases at three levels: products, aisles, and departments.
 
-Among the 484 shoppers in the fixed-window sample, average product-level Jaccard similarity is **19.4%**. Consecutive baskets therefore share fewer products than a simple idea of habitual grocery shopping might suggest.
+The median repeat rates are 27.7% for products, 47.4% for aisles, and 71.7% for departments. I used three distribution charts to show how shopping baskets can look different at the product level but more similar at the category level.
 
-**Design plan:** Keep the histogram simple, label the mean directly, and explain Jaccard similarity in one sentence.
+Visual: Three charts comparing repeat rates across 484 shoppers.
+<iframe title="How Often Do Shoppers Repeat the Same Products?" aria-label="Small multiple line chart" id="datawrapper-chart-ON3Eq" src="https://datawrapper.dwcdn.net/ON3Eq/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="722" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
 
-**Transition:** If baskets change this much, are shoppers exploring unfamiliar products?
 
-## Act 2: The Reveal
+## Act 2: Not in the Last Basket Doesn't Mean New
 
-### Different Products Can Still Belong to Familiar Categories
+This section introduces the main finding. On average, 30.5% of products were also in the previous order, 30.6% had been purchased earlier but not in the previous order, and 38.9% were new to the shopper's recorded history.
 
-![Product, Aisle, and Department Similarity](images/habitual-shopper/sketch_02_categories.png)
+I used a 100% stacked bar chart to show these three groups together. The 30.6% is especially important because it shows that shoppers often return to familiar products.
 
-**Question:** Does a different product basket represent a different type of shopping trip?
+Visual: A 100% stacked bar chart showing basket composition.
+![Basket composition](https://raw.githubusercontent.com/Hanklin999/the-habitual-shopper/main/outputs/figures/03_basket_composition.png)
 
-Average overlap rises as the level of classification becomes broader:
 
-- Products: **19.4%**
-- Aisles: **29.6%**
-- Departments: **46.1%**
+## Act 3: When Familiar Products Return
 
-This does not prove loyalty or stable preferences. Broader categories naturally create more opportunities for overlap. It shows that the answer depends partly on what level is being measured.
+To make the findings more concrete, I followed Shopper 977 across Orders 8, 9, and 10.
 
-**Design plan:** Use direct labels instead of a legend and add a note that broader categories are easier to match.
+The shopper purchased 6, 13, and 7 products in these orders. Several products from Order 8 disappeared in Order 9 but returned in Order 10, including bananas, avocados, and almond milk.
 
-**Transition:** Even if the categories are familiar, are the specific products new to the shopper?
+I used shopping basket illustrations to help readers follow these changes.
 
-## Act 3: The Main Insight
+Visual: Three shopping baskets showing the products purchased in each order.
+![Shopper 977 shopping baskets](https://raw.githubusercontent.com/Hanklin999/the-habitual-shopper/main/outputs/figures/購物者977：輪替購物行為示例.png)
 
-### A Different Basket Does Not Always Mean Discovery
 
-![Basket Similarity vs. Product Novelty](images/habitual-shopper/sketch_03_discovery.png)
+## Act 4: What Should Grocery Apps Remember?
 
-**Question:** Are shoppers buying new-to-history products or rearranging familiar ones?
+The final section connects the findings to grocery app design. I introduce three possible features: Quick Reorder, Returning Favorites, and Category Discovery.
 
-Using exploratory median thresholds, I organize shoppers into four descriptive patterns: Routine, Rotational, New-to-user, and Mixed. **50 of 484 shoppers (10.3%)** fall into the Rotational group: their consecutive baskets have relatively low overlap, but their products are mostly familiar from earlier orders.
+The idea is that grocery apps could use more than the previous order to help shoppers find products they may want to buy again.
 
-These labels are storytelling tools, not permanent or validated customer types.
-
-**Design plan:** Emphasize the Rotational quadrant and mute the remaining observations. Define both axes in plain language.
-
-### One Shopper Makes the Difference Clear
-
-![Real Shopping Basket Example: Shopper 42](images/habitual-shopper/sketch_03_basket_example.png)
-
-Shopper 42 purchased six products in Order 9 and seven in Order 10. Only Organic Blueberries appeared in both orders, producing **8.3% overlap**. However, every product in Order 10 had appeared earlier in the shopper's recorded history. The basket changed, but it contained **0% new-to-history products**.
-
-**Design plan:** Use the example immediately after the scatter plot so readers can connect the abstract measures to a real pair of orders.
-
-**Transition:** Is this rotational behavior temporary, or does it continue?
-
-## Act 4: The Check
-
-### Some Patterns Continue Across Later Orders
-
-![Shopping Pattern Persistence](images/habitual-shopper/sketch_04_persistence.png)
-
-**Question:** Do the descriptive patterns persist in a later observation period?
-
-Among shoppers with complete records for both periods:
-
-- **80.3%** of initially Routine shoppers remain Routine (n = 127).
-- **53.7%** of initially Rotational shoppers remain Rotational (n = 41).
-
-Routine behavior appears more stable than rotational behavior in this selected subset. The result should be interpreted cautiously because novelty changes as purchase history accumulates and the later-window group is not a random sample.
-
-**Design plan:** Use two 100% stacked bars with direct percentage labels and a visible note about the selected validation subset.
+Visual: Three feature ideas based on the shopping patterns.
 
 ---
 
@@ -111,23 +80,19 @@ The primary audience is product managers and analysts who work with online shopp
 
 For feedback, I plan to speak with three types of readers:
 
-1. A frequent online shopper who can judge whether the story feels relevant.
-2. A reader with product, business, or analytics experience who can evaluate the implications.
-3. A reader without a data background who can identify confusing terms or charts.
+1. A frequent online shopper.
+2. Someone with a business or analytics background.
+3. Someone without a technical background.
 
-No names or personally identifiable information will be reported.
 
 ## Research Goals and Interview Script
 
 | Goal | Questions to Ask |
 |---|---|
-| Test the opening | After reading the title and opening, what do you think the story will show? |
-| Check the central distinction | In your own words, what is the difference between basket change and product discovery? |
-| Test chart comprehension | What do you notice first in each chart? What is confusing or missing? |
-| Evaluate the Shopper 42 example | Does the example make the main point clearer? Why or why not? |
-| Check relevance | Does this story change how you think about your own online shopping? |
-| Test the ending | What action or conclusion do you take away from the final section? |
-| Find weak points | Where did you lose interest, slow down, or want more evidence? |
+| First impression | What do you think this story is about? |
+| Understand the main finding | What do you think the 30.6% returning-products group means? |
+| Shopper example | Does Shopper 977's example (Orders 8–10) help you understand the story? |
+| Product implications | Which of the three grocery app features would you find most useful? |
 
 The interview should begin without explaining the intended conclusion. After the participant reads the draft, I will ask the questions above and request a short summary of the story in their own words.
 
@@ -138,9 +103,9 @@ The interview should begin without explaining the intended conclusion. After the
 | Question or task | Interview 1 | Interview 2 | Interview 3 |
 |---|---|---|---|
 | Expected story after the opening | To be completed | To be completed | To be completed |
-| Explanation of basket change vs. discovery | To be completed | To be completed | To be completed |
+| Understanding of the key findings | To be completed | To be completed | To be completed |
+| Reaction to Shopper 977 | To be completed | To be completed | To be completed |
 | Most confusing chart or term | To be completed | To be completed | To be completed |
-| Reaction to Shopper 42 | To be completed | To be completed | To be completed |
 | Main takeaway or action | To be completed | To be completed | To be completed |
 
 ---
@@ -149,22 +114,23 @@ The interview should begin without explaining the intended conclusion. After the
 
 The following revisions come from the current analysis and self-review. Interview-based changes should be added after the research sessions.
 
-| Current observation | Planned change for Part III |
+
+| Area | Planned Changes |
 |---|---|
-| Jaccard similarity is unfamiliar to many readers. | Introduce it as “shared products divided by all unique products” before using the technical name. |
-| The four segment labels may look more definitive than they are. | Call them descriptive patterns and show that the thresholds are exploratory. |
-| The category comparison can be mistaken for evidence of loyalty. | Add a note that broader categories naturally create more overlap. |
-| The scatter plot is the most complex visual. | Define both axes directly and reveal the Rotational quadrant only after the base chart is understood. |
-| Percentages in the later-window analysis may appear population-wide. | Display the subgroup sizes and the selected-sample limitation beside the chart. |
-| The story currently speaks mainly to product teams. | Add a short shopper takeaway: automate routine purchases and make exploration intentional. |
+| Data visualizations | Improve chart labels and make the key percentages easier to compare. |
+| Shopper example | Make the changes between Orders 8, 9, and 10 easier to follow. |
+| Storytelling | Shorten some sections and improve the transitions between charts. |
+| Product implications | Add simple visuals to explain the three grocery app features. |
+| Overall design | Improve spacing, font consistency, and mobile readability. |
+
 
 ## Part III Priorities
 
-1. Complete and document user interviews.
-2. Revise the story based on repeated feedback, not one isolated comment.
-3. Reduce explanatory text around each chart.
-4. Improve annotations, type size, color contrast, and mobile readability.
-5. Build the final scroll-driven page and test all links and visualizations.
+1. Complete three user interviews and summarize the feedback.
+2. Improve the charts and Shopper 977 illustrations.
+3. Make the story easier to read on both desktop and mobile.
+4. Revise the Shorthand story based on reader feedback.
+5. Finalize the layout, references, and visual design.
 
 ---
 

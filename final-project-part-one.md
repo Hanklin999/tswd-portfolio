@@ -103,7 +103,7 @@ Shoppers may save time by using subscriptions or saved lists for routine items, 
 
 ## References
 
-1. Instacart. (2017). *Instacart Market Basket Analysis*. Kaggle. https://www.kaggle.com/competitions/instacart-market-basket-analysis/data
+1. Instacart. (2017). *Instacart Market Basket Analysis*. Kaggle. https://www.kaggle.com/datasets/psparks/instacart-market-basket-analysis
 2. Berinato, S. (2016). *Good Charts: The HBR Guide to Making Smarter, More Persuasive Data Visualizations*. Harvard Business Review Press.
 
 ## AI Acknowledgements

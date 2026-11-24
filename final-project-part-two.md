@@ -25,9 +25,14 @@ The analysis focuses on 484 shoppers with complete records for Orders 5–10. I 
 
 # Wireframes and Storyboards
 
-I used Shorthand to build a working draft of my story. The goal was to guide readers from general shopping patterns to a real shopper's experience, and then explore what the findings might mean for grocery apps.
+I built the working storyboard directly in Shorthand so readers could review the story in its intended format.
 
-[View the Shorthand Story](https://carnegiemellon.shorthandstories.com/the-habitual-shopper-an-instacart-data-story/index.html)
+[Open the Shorthand story in a new page](https://carnegiemellon.shorthandstories.com/the-habitual-shopper-an-instacart-data-story/index.html)
+
+<script
+  src="https://carnegiemellon.shorthandstories.com/the-habitual-shopper-an-instacart-data-story/embed.js"
+  data-id="https://carnegiemellon.shorthandstories.com/the-habitual-shopper-an-instacart-data-story">
+</script>
 
 
 ## Act 1: Different Products, Familiar Categories?
@@ -36,7 +41,7 @@ The story starts by comparing repeat purchases at three levels: products, aisles
 
 The median repeat rates are 27.7% for products, 47.4% for aisles, and 71.7% for departments. I used three distribution charts to show how shopping baskets can look different at the product level but more similar at the category level.
 
-Visual: Three charts comparing repeat rates across 484 shoppers.
+
 <iframe title="How Often Do Shoppers Repeat the Same Products?" aria-label="Small multiple line chart" id="datawrapper-chart-ON3Eq" src="https://datawrapper.dwcdn.net/ON3Eq/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="722" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
 
 
@@ -46,7 +51,7 @@ This section introduces the main finding. On average, 30.5% of products were als
 
 I used a 100% stacked bar chart to show these three groups together. The 30.6% is especially important because it shows that shoppers often return to familiar products.
 
-Visual: A 100% stacked bar chart showing basket composition.
+
 ![Basket composition](https://raw.githubusercontent.com/Hanklin999/the-habitual-shopper/main/outputs/figures/03_basket_composition.png)
 
 
@@ -58,7 +63,7 @@ The shopper purchased 6, 13, and 7 products in these orders. Several products fr
 
 I used shopping basket illustrations to help readers follow these changes.
 
-Visual: Three shopping baskets showing the products purchased in each order.
+
 ![Shopper 977 shopping baskets](https://raw.githubusercontent.com/Hanklin999/the-habitual-shopper/main/outputs/figures/購物者977：輪替購物行為示例.png)
 
 
@@ -68,69 +73,69 @@ The final section connects the findings to grocery app design. I introduce three
 
 The idea is that grocery apps could use more than the previous order to help shoppers find products they may want to buy again.
 
-Visual: Three feature ideas based on the shopping patterns.
+
 
 ---
 
 # User Research
 
-## Target Audience and Recruitment
+## Target Audience
 
-The primary audience is product managers and analysts who work with online shopping, recommendations, or repeat purchasing. The story should also remain understandable to regular online grocery shoppers.
 
-For feedback, I plan to speak with three types of readers:
+The main audience is product managers and analysts who work with online shopping or recommendation systems. I also want the story to be understandable to regular online shoppers.
 
-1. A frequent online shopper.
-2. Someone with a business or analytics background.
-3. Someone without a technical background.
+For the in-class critique, I showed the Shorthand draft to classmates and asked them to focus on the story, charts, shopper example, and visual design.
 
 
 ## Research Goals and Interview Script
 
-| Goal | Questions to Ask |
-|---|---|
-| First impression | What do you think this story is about? |
-| Understand the main finding | What do you think the 30.6% returning-products group means? |
-| Shopper example | Does Shopper 977's example (Orders 8–10) help you understand the story? |
-| Product implications | Which of the three grocery app features would you find most useful? |
+I asked my group to consider four questions:
+
+1. What do you think the main story is?
+2. Which chart is the hardest to understand?
+3. Does the Shopper 977 example make the finding clearer?
+4. What should I change before the final version?
 
 The interview should begin without explaining the intended conclusion. After the participant reads the draft, I will ask the questions above and request a short summary of the story in their own words.
 
 ## Interview Findings
 
-**Status:** User interviews have not yet been documented. This section should be completed with actual feedback before submission; findings should not be invented.
+### In-Class Critique Findings
+I showed my Shorthand draft to my critique group. They thought the main story worked, especially the Shopper 977 example. Most of their feedback focused on making the visuals easier to read.
 
-| Question or task | Interview 1 | Interview 2 | Interview 3 |
-|---|---|---|---|
-| Expected story after the opening | To be completed | To be completed | To be completed |
-| Understanding of the key findings | To be completed | To be completed | To be completed |
-| Reaction to Shopper 977 | To be completed | To be completed | To be completed |
-| Most confusing chart or term | To be completed | To be completed | To be completed |
-| Main takeaway or action | To be completed | To be completed | To be completed |
+### Top Three Observations
+
+1. The first set of charts was difficult to compare. A side-by-side or overlapping layout may work better than the current vertical layout.
+2. The Shopper 977 example made the main idea easier to understand, but the basket illustration needs clearer labels.
+3. The background colors and chart colors were sometimes distracting. A simpler palette would improve readability.
+
+The group also asked whether the Kaggle data represented real purchases. I confirmed that it is the public Instacart Online Grocery Shopping Dataset released by Instacart in 2017.
+
+### Plans Going Forward
+
+I will redesign the first visualization, improve the Shopper 977 illustration, and use a simpler color palette. I will also add clearer source notes to the charts. I plan to keep the current story structure because the group found the main idea understandable.
 
 ---
 
 # Identified Changes for Part III
 
-The following revisions come from the current analysis and self-review. Interview-based changes should be added after the research sessions.
+The following changes are based on the in-class critique.
 
-
-| Area | Planned Changes |
+| Area | Planned Change |
 |---|---|
-| Data visualizations | Improve chart labels and make the key percentages easier to compare. |
-| Shopper example | Make the changes between Orders 8, 9, and 10 easier to follow. |
-| Storytelling | Shorten some sections and improve the transitions between charts. |
-| Product implications | Add simple visuals to explain the three grocery app features. |
-| Overall design | Improve spacing, font consistency, and mobile readability. |
+| First visualization | Test a side-by-side or overlapping layout. |
+| Shopper 977 example | Keep the example but improve the labels and basket comparison. |
+| Color palette | Use fewer colors and give each color one consistent meaning. |
+| Data source | Add a clear Instacart source note below each chart. |
 
 
 ## Part III Priorities
 
-1. Complete three user interviews and summarize the feedback.
-2. Improve the charts and Shopper 977 illustrations.
-3. Make the story easier to read on both desktop and mobile.
-4. Revise the Shorthand story based on reader feedback.
-5. Finalize the layout, references, and visual design.
+1. Redesign the first visualization.
+2. Improve the Shopper 977 illustration.
+3. Simplify the colors and backgrounds.
+4. Add clearer source notes.
+5. Revise the Shorthand story based on the critique.
 
 ---
 
@@ -142,4 +147,4 @@ The following revisions come from the current analysis and self-review. Intervie
 
 ## AI Acknowledgements
 
-I used ChatGPT to help reorganize the Part II draft, revise wording, and debug the Python analysis. I verified the reported values against the generated analysis outputs. User-research findings will be based only on actual interviews and will not be generated by AI.
+I used ChatGPT to help edit the wording and debug parts of the Python analysis. I checked the reported values against my analysis outputs. The critique findings above are based on feedback from my in-class group.
